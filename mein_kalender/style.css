@@ -1,0 +1,115 @@
+
+body {
+  background-color: #5e1c32e8;
+  color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Monsterrat', sans-serif;
+  margin: 40px 20px;
+  padding: 15px;
+}
+    table { 
+        color: purple;
+        background-color: rgba(238, 143, 182, 0.733);
+        text-align: center;
+        border: 2px plum;
+        margin: auto; 
+        border-collapse: collapse;
+        width: 250px;
+        text-align: center;
+        border: 3px solid black;
+        border-radius: 15px;
+        overflow: hidden
+    }
+         td, th {
+             border: 1px solid black
+        }
+            ul {
+                list-style: none;
+                margin: 60px;
+            }
+            
+                li::before {
+                content: "•";
+                color: lightpink;    
+                margin-right: 15px;
+                }
+
+        tbody {
+                height: 2px;
+                background-color: #813d7250;
+                margin: 20px 0;
+                width: 100%;
+                font-weight: bold;
+            }
+            table td:nth-child(7) {
+                font-weight: bold;
+                color: red;
+            }
+            
+            table td:nth-child(6) {
+                font-weight: lighter;
+                color: lightgray;
+            }
+            td.vormonat {
+                color: lightpink;
+                font-weight: lighter;
+                border: 1px solid black;
+                background-color: grey;
+            }
+            
+            td.neuermonat {
+                color:lightpink;
+                font-weight: lighter;
+                border: 1px solid black;
+                background-color: grey;
+            }
+                    .blume1 {
+                         position: absolute;
+                    }
+
+                    .blatt {
+                        position: absolute;
+                        width: 10px;
+                        height: 15px;
+                        background: rgb(255, 155, 193);
+                        border-radius: 50%;
+                    }
+
+                        .blatt:nth-child(1) { transform: rotate(0deg) translate(1px,-10px); }
+                        .blatt:nth-child(2) { transform: rotate(72deg) translate(1px,-10px); }
+                        .blatt:nth-child(3) { transform: rotate(144deg) translate(1px,-10px); }
+                        .blatt:nth-child(4) { transform: rotate(216deg) translate(1px,-10px); }
+                        .blatt:nth-child(5) { transform: rotate(288deg) translate(1px,-10px); }
+
+                     
+                        @keyframes fliegen1 {0% {top:-50px; left:30px; opacity:1;} 100% {top:700px; left:30px; 
+                            opacity:0;}}
+                        @keyframes fliegen2 {0% {top:-70px; left:166px; opacity:1;} 100% {top:700px; left:166px; 
+                            opacity:0;}}
+                        @keyframes fliegen3 {0% {top:-60px; left:310px; opacity:1;} 100% {top:700px; left:310px; 
+                            opacity:0;}}
+                        @keyframes fliegen4 {0% {top:-80px; left:675px; opacity:1;} 100% {top:700px; left:675px; 
+                            opacity:0;}}
+                        @keyframes fliegen5 {0% {top:-55px; left:990px; opacity:1;} 100% {top:700px; left:990px; 
+                            opacity:0;}}
+                        @keyframes fliegen6 {0% {top:-65px; left:1200px; opacity:1;} 100% {top:700px; left:1200px; 
+                            opacity:0;}}
+                        @keyframes fliegen7 {0% {top:-75px; left:1540px; opacity:1;} 100% {top:700px; left:1540px; 
+                            opacity:0;}}
+                        @keyframes fliegen8 {0% {top:-60px; left:1780px; opacity:1;} 100% {top:700px; left:1780px; 
+                            opacity:0;}}
+                        @keyframes fliegen9 {0% {top:-50px; left:2000px; opacity:1;} 100% {top:700px; left:2000px; 
+                            opacity:0;}}
+
+                       
+                        .fliegen:nth-of-type(1) { width:15px; height:15px; animation: fliegen1 18s linear infinite; }
+                        .fliegen:nth-of-type(2) { width:18px; height:18px; animation: fliegen2 22s linear infinite; }
+                        .fliegen:nth-of-type(3) { width:20px; height:20px; animation: fliegen3 20s linear infinite; }
+                        .fliegen:nth-of-type(4) { width:17px; height:17px; animation: fliegen4 24s linear infinite; }
+                        .fliegen:nth-of-type(5) { width:19px; height:19px; animation: fliegen5 19s linear infinite; }
+                        .fliegen:nth-of-type(6) { width:16px; height:16px; animation: fliegen6 21s linear infinite; }
+                        .fliegen:nth-of-type(7) { width:18px; height:18px; animation: fliegen7 23s linear infinite; }
+                        .fliegen:nth-of-type(8) { width:15px; height:15px; animation: fliegen8 20s linear infinite; }
+                        .fliegen:nth-of-type(9) { width:20px; height:20px; animation: fliegen9 25s linear infinite; }
