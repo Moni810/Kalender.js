@@ -1,4 +1,14 @@
+.windsong-regular {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.windsong-medium {
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
 body {
   background-color: #5e1c32e8;
   color: #e2e8f0;
@@ -41,16 +51,16 @@ body {
                 background-color: #813d7250;
                 margin: 20px 0;
                 width: 100%;
-                font-weight: bold;
+                font-weight: normal;
             }
             table td:nth-child(7) {
-                font-weight: bold;
-                color: red;
+                font-weight: lighter;
+                color: rgb(190, 5, 5);
             }
             
             table td:nth-child(6) {
                 font-weight: lighter;
-                color: lightgray;
+                color: rgb(0, 0, 0);
             }
             td.vormonat {
                 color: lightpink;
@@ -59,7 +69,7 @@ body {
                 background-color: grey;
             }
             
-            td.neuermonat {
+            td.neuer.monat {
                 color:lightpink;
                 font-weight: lighter;
                 border: 1px solid black;
@@ -113,3 +123,38 @@ body {
                         .fliegen:nth-of-type(7) { width:18px; height:18px; animation: fliegen7 23s linear infinite; }
                         .fliegen:nth-of-type(8) { width:15px; height:15px; animation: fliegen8 20s linear infinite; }
                         .fliegen:nth-of-type(9) { width:20px; height:20px; animation: fliegen9 25s linear infinite; }
+
+.kalender-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 100vh;
+}
+.prevBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  right: 20px;
+   top: 20px;
+   size: 100px;
+}
+
+.prevBtn {
+  width: 40px;
+  height: 40px;
+}
+.nextBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  left: 20px;
+  top: 20px;
+  size: 50px;
+}
+.nextBtn {
+  width: 40px;
+  height: 40px;
+}
+
+.nextBtn

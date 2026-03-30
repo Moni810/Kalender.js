@@ -1,30 +1,75 @@
-let kalender = [];
 let jahr = 2026;
 let monat = 2;
-let startTag = (new Date(jahr, monat, 1).getDay() + 6) % 7; 
 
-for (let i = 0; i < startTag; i++) {
-    kalender.push(null);
-}
-let tageimMonat = 31; 
-for (let tag = 1; tag <= tageimMonat; tag++) {
-    kalender.push(tag);
-}
+let monate = [
+  "Januar", "Februar", "März", "April",
+  "Mai", "Juni", "Juli", "August",
+  "September", "Oktober", "November", "Dezember"
+];
 
-let tbody = document.getElementById("tage");
-tbody.innerHTML = "";
-let tr = document.createElement("tr");
+function renderCalendar() {
+     document.getElementById("monatTitel").textContent =
+        monate[monat] + " " + jahr;
+        let tageImMonat = new Date(jahr,monat +1, 0).getDate();
+let startTag = new Date(jahr, monat, 7).getDay( +6) % 7;
+    let tbody = document.getElementById("tage");
+    tbody.innerHTML ="";
 
-for (let i = 0; i < kalender.length; i++) {
+    let tr = document.createElement("tr");
+    let zellenZähler = 0;
+
+
+    for (let i = 0; i < startTag; i++) {
         let td = document.createElement("td");
-        td.textContent = kalender[i];
-            if (kalender[i] === null) td.classList.add("vormonat");
+        td.textContent = "";
         tr.appendChild(td);
-        if ((i + 1) % 7 === 0) {
+        zellenZähler++;
+    }
+
+    for (let tag = 1 ; tag <= tageImMonat; tag++) {
+        let td = document.createElement("td");
+        td.textContent = tag;
+
+        tr.appendChild(td);
+        zellenZähler++;
+        
+        if (zellenZähler % 7 === 0) {
             tbody.appendChild(tr);
             tr = document.createElement("tr");
-            while (kalender.length % 7 !== 0) {
-            kalender.push(null);
-       }
+        }
+    }
+
+    while (zellenZähler % 7 !== 0) {
+                let td = document.createElement("td");
+                td.textContent = "";
+                tr.appendChild(td);
+                zellenZähler++;
+            }
+            tbody.appendChild(tr);         
+}
+
+function nextMonth() {
+    monat++;
+
+    if (monat > 11) {
+        monat = 0;
+        jahr++;
     }
 }
+
+function prevMonth() {
+    monat--;
+
+    if (monat < 0) {
+        monat = 11;
+        jahr--;
+    }
+}
+renderCalendar();
+document.getElementById("nextBtn").addEventListener("click", function()) {
+    console.log("Klick funktioniert");
+    document.getElementById("prevBtn").addEventListener("click", function()) {
+    console.log("Klick funktioniert");
+    }
+}
+console.log(document.getElementById("nextBtn"));
