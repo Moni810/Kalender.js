@@ -8,25 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scene"></div>
-    <img src="gClass.png" class="auto">
-        <h1> Kalender 2026</h1>
-            <div class="monat-header">
-
-            <button id="prevBtn" class="nav">
-                <img src="pfeil.png">
-            </button>
-
-            <h2 id="monatTitel">März 2026</h2>
-
-            <button id="nextBtn" class="nav">
-                <img src="pfeil.png">
-            </button>
-
-            </div>
-    <div class="kalender 2026">
-
-    <div class="kalender-wrapper">
+    <div class="kalender-container">
+        <img src="gClass.png" class="auto">
+            <h1> Kalender 2026</h1>
+                <div class="monat-header">
+                
+                    <button id="prevBtn" class="nav">
+                        <img src="pfeil_w.png">
+                    </button>
+                    
+                    <h2 id="monatTitel">März 2026</h2>
+                    
+                        <button id="nextBtn" class="nav">
+                        <img src="pfeil_w.png">
+                    </button>
+                </div>
+        <div class="kalender-2026">
     <table>
         <thead>
             <tr>
@@ -43,10 +40,9 @@
         </thead>
         <tbody id="tage">
         </tbody>
-        <button onclick="goToToday()">aktuelles Datum</button>
     </table>
-    </div>
-    </div>
+        <button id="heuteBtn" onclick="goToToday()">aktuelles Datum</button>
+        </div>
         <ul>
         <li>
             18.–19. März 1848 – Märzrevolution 1848

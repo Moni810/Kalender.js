@@ -9,17 +9,54 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: "Theater_Brillion";
+  src: url("Theater_Brillion.otf") format("truetype");
+}
 
+
+h1 {
+ position: relative;
+ margin: 40px 1000px;
+ font-family: Theater_Brillion;
+ font-size: 50px;
+ font-weight: normal;
+}
+
+.kalender-box {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.monat-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: Theater_Brillion;
+    margin-left: 20px;
+    font-size: xx-large;
+    width: 1200px;
+    flex: 1;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+#monatTitel {
+  width: 250px;
+  text-shadow: 0 0 30px yellow;
+}
 .auto {
     position: absolute;
     right: -15%;
     top: 15%;
     transform: translateY(-50%);
-    opacity: 0.5;
+    opacity: 0.4;
     width: 1700px;
     transform: scale(1.05);
     height: auto;
-
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
 }
 
@@ -36,19 +73,20 @@ body {
   line-height: 1.2;
   letter-spacing: -0.2px;
 }
+
     table { 
         color: rgb(230, 230, 230);
         background-color: rgba(160, 13, 13, 0.308);
         text-align: center;
-        border: 2px rgba(0, 0, 0, 0.116);
-        margin: 30px; 
+        border: 2px rgb(201, 30, 30);
+        margin: 5px; 
         border-collapse: collapse;
-        width: 250px;
+        width: 400px;
+        height: 200px;
         text-align: center;
-        border: 3px solid black;
+        border: 3px solid rgb(238, 215, 7);
         border-radius: 15px;
-        overflow: hidden;
-        left: 20%;
+        overflow: visible;
         opacity: 0.7;
     }
          td, th {
@@ -66,51 +104,102 @@ body {
                 }
 
         tbody {
+                border-spacing: 10px;
                 height: 2px;
-                background-color: #948d8298;
+                background-color: #a8a5a1b4;
                 margin: 20px 0;
                 width: 100%;
-                font-weight: normal;
+                font-weight: normal; 
+                font-family: Theater_Brillion;
             }
-
-.monat-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  font-family: windsong;
+          .sonntag {
+              color: red;
+              font-weight: bold;
+          }
+td {
+    position: relative;
 }
-.nav {
-  background: none;
-  border: none;
-  cursor: pointer;
+.wochenende {
+  background: #462828;
+  opacity: 0,5;
 }
 
-.nav img {
-  width: 40px;
-  height: 40px;
+.feiertag {
+    background: #f8abab;
+    position: relative;
+    font-weight: bold;
+}
+      td.feiertag:hover::before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 6px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+    }
+
+td.feiertag {
+    position: relative;
 }
 
-.nav {
-    background: none;
-  border: none;
-  cursor: pointer;
+td.feiertag:hover::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+
+    padding: 8px 12px; 
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    white-space: nowrap; 
+    min-width: max-content; 
+
+    z-index: 9999;
+
+    pointer-events: none;
 }
 
-.nav img {
-  width: 40px;
-  height: 40px;
-}
-#prevBtn img {
-    transform: scaleX(-1);
-}
-
-
+    .nav {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav img {
+      width: 40px;
+      height: 40px;
+    }
+    .nav {
+        background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav img {
+      width: 40px;
+      height: 40px;
+    }
+    #prevBtn img {
+        transform: scaleY(-1);
+        transform: rotate(-60deg);
+        flex-shrink: 0;
+    }
+    #nextBtn img {
+        transform: rotate(130deg);
+        flex-shrink: 0;
+    }
 
 .heute {                                   
-    background-color: rgb(63, 3, 3);
+    background-color: rgba(24, 23, 23, 0.692);
     border-radius: 50%;
-    color: white;
+    color: rgb(226, 212, 19);
 }
 
 
@@ -121,14 +210,14 @@ td:hover {
 }
 
 
-button {   
-    background: none;
-    border: 1px, solid black;
-    border-style: double;
-
-    font-family: windsong; 
-    color: lightpink;
-    
+#heuteBtn {   
+    background-color: rgb(34, 33, 33);
+    border: 3px, solid rgb(48, 46, 46);
+    border-style: double; 
+    color: rgb(255, 255, 255);
+    margin: 0px 160px;
+    font-family: "Theater_Brillion";
+    font-size: x-large;
 }
 
 li {
