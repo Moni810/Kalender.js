@@ -17,10 +17,12 @@
 
 h1 {
  position: relative;
- margin: 40px 1000px;
+ margin: 20px 0;
+ text-align: center;
  font-family: Theater_Brillion;
- font-size: 50px;
  font-weight: normal;
+ font-size: 80px;
+ text-shadow: 0 0 20px yellow;
 }
 
 .kalender-box {
@@ -46,7 +48,7 @@ h1 {
 
 #monatTitel {
   width: 250px;
-  text-shadow: 0 0 30px yellow;
+  text-shadow: 0 0 20px yellow;
 }
 .auto {
     position: absolute;
